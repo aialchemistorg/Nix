@@ -27,10 +27,10 @@ Once installed, it can be executed from any terminal on **Windows, macOS, or Lin
 
 ## 🔩 Features
 
-- Cross-platform executable (Node 20+)
+- Cross-platform executable (Node 18+)
 - Fully portable — no dependencies after packaging
 - Structured modular code in `/src`
-- Global install support with `npm i -g`
+- Global install support with `npm link`
 - Easily extendable architecture
 
 ---
@@ -78,57 +78,18 @@ Link the command globally:
 npm link
 ```
 
-Now, run `nix` from anywhere in your system.
-
-#### Option 2 — Global Package Install
-
-Alternatively, publish or install globally using:
+Example Command:
 
 ```bash
-npm install -g .
+nix init
+nix add .
 ```
-
----
-
-## 🚀 Usage
-
-After installation, simply run:
-
-```bash
-nix
-```
-
-You can add custom subcommands and options as defined in the `/src/commands` directory.
-
-Example:
-
-```bash
-nix run <command-name>
-```
-
----
-
-## 🧰 Development Setup
-
-To start developing or testing locally:
-
-```bash
-npm run dev
-```
-
-This uses `nodemon` or your configured dev script to reload automatically on code changes.
 
 ---
 
 ## 🏗️ Build & Distribution
 
 To compile into standalone binaries (for Linux, macOS, and Windows):
-
-```bash
-npm run build
-```
-
-Or manually using `pkg`:
 
 ```bash
 pkg . --targets node20-linux-x64,node20-macos-x64,node20-win-x64
@@ -168,10 +129,3 @@ Founder, Archeon Solutions | Developer | Open Source Enthusiast
 
 > “Build tools that empower — not restrict.”
 > — *nix Philosophy*
-
-```
-
----
-
-Would you like me to make this **README auto-detect your OS commands (like using `where` vs `which`)** in the example section too? That can make it even more polished for all systems.
-```
