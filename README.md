@@ -1,10 +1,4 @@
-Here’s a **professional, modern, and clean `README.md`** for your **nix** project — designed so that **any developer on any OS (Windows, macOS, Linux)** can easily clone, install, and run it globally.
-It uses badges, markdown icons, and proper formatting — no emojis.
-
----
-
-```markdown
-# ⚙️ nix — Universal Command-line Utility
+# NIX
 
 A cross-platform Node.js command-line tool designed for modern developers.  
 Built with simplicity, speed, and portability in mind — install once and use anywhere.
