@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+import init from '../src/commands/init.js';
+import add from '../src/commands/add.js';
+import commit from '../src/commands/commit.js';
+import log from '../src/commands/log.js';
+import status from '../src/commands/status.js'; // 🆕 added
+
+const [,, cmd, ...args] = process.argv;
+
+switch (cmd) {
+  case 'init':
+    init();
+    break;
+
+  case 'add':
+    if (!args[0]) {
+      console.log('Usage: nix add <file>');
+    } else {
+      add(args[0]);
+    }
+    break;
+
+  case 'commit': {
+    const msgIndex = args.indexOf('-m');
+    if (msgIndex === -1 || !args[msgIndex + 1]) {
+      console.log('Usage: nix commit -m "message"');
+    } else {
+      commit(args[msgIndex + 1]);
+    }
+    break;
+  }
+
+  case 'log':
+    log();
+    break;
+
+  case 'status':
+    status();
+    break;
+
+  default:
+    console.log(`
+Available Commands:
+  init              Initialize a new Nix repo
+  add <file>        Stage a file for commit
+  commit -m "msg"   Commit staged files
+  log               Show commit history
+  status            Show current project status
+`);
+}

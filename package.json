@@ -1,0 +1,25 @@
+{
+  "name": "nix",
+  "version": "1.0.0",
+  "description": "A lightweight Git-like version control system built with Node.js",
+  "main": "./src/main.js",
+  "type": "module",
+  "bin": {
+    "nix": "./src/main.js"
+  },
+  "scripts": {
+    "start": "node ./src/main.js",
+    "test": "echo \"No tests defined\" && exit 0"
+  },
+  "keywords": [
+    "version-control",
+    "git",
+    "cli",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81"
+  }
+}
