@@ -102,7 +102,7 @@ pkg . --targets node18-linux-x64,node18-macos-x64,node18-win-x64
 ## 🧩 Tech Stack
 
 * **Language:** JavaScript (Node.js)
-* **Runtime:** Node 20+
+* **Runtime:** Node 18+
 * **Bundler:** pkg
 * **Platform:** Cross-platform (Linux, macOS, Windows)
 
