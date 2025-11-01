@@ -92,7 +92,7 @@ nix add .
 To compile into standalone binaries (for Linux, macOS, and Windows):
 
 ```bash
-pkg . --targets node20-linux-x64,node20-macos-x64,node20-win-x64
+pkg . --targets node18-linux-x64,node18-macos-x64,node18-win-x64
 ```
 
 > Note: Ensure your `package.json` contains `"bin": "./bin/nix"` and main entry points are properly defined.
